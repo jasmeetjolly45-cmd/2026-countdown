@@ -8,11 +8,11 @@
 }
 
 html, body {
-    /* Calls your background.png file from your GitHub repository */
+    /* Calls your background.png file and scales it down so the leaves/pattern look smaller */
     background-image: url('background.png');
-    background-size: cover;
+    background-size: 1000px; /* Try changing this: e.g., 800px makes things smaller, 1200px makes things larger */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat; /* Tiles the background nicely across any screen size */
     background-color: #f6f3ed; /* Fallback tone */
     
     width: 100%;
