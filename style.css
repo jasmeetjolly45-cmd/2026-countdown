@@ -1,5 +1,5 @@
 /* ==========================
-   RESET & TRANSPARENT PAGE
+   RESET & NOTION DARK MODE SYNC
 ========================== */
 * {
     margin: 0;
@@ -8,7 +8,8 @@
 }
 
 html, body {
-    background-color: transparent !important;
+    /* Automatically matches Notion's background in both light and dark modes */
+    background-color: #ffffff !important;
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -17,6 +18,12 @@ html, body {
     align-items: center;
     font-family: 'Cormorant Garamond', serif;
     overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #191919 !important; /* Matches Notion dark mode background */
+    }
 }
 
 /* ==========================
@@ -28,10 +35,10 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     
-    /* This padding creates the exact photo border around your green widget */
+    /* Creates the exact photo border around your green widget */
     padding: 24px; 
     border-radius: 28px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
