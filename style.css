@@ -34,10 +34,13 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     
-    /* Unequal padding: Top/Bottom is thin (20px), Left/Right is thick (55px) to create the wide rectangle look */
-    padding: 20px 55px; 
-    border-radius: 28px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* Increased padding for a larger size (~50% bigger) with wide rectangular proportions */
+    padding: 30px 85px; 
+    
+    /* Sharp 90-degree right angles for the outer border */
+    border-radius: 0px; 
+    
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,9 +52,12 @@ html, body {
 .widget-box {
     background-color: #10281b; /* Exact calendar forest green color */
     width: 100%;
-    max-width: 380px; /* Increased width to make it a nice rectangle */
-    padding: 20px 24px; /* Increased interior spacing */
-    border-radius: 20px;
+    max-width: 540px; /* Substantially larger width (~50% bigger) */
+    padding: 30px 36px; /* Rich interior spacing */
+    
+    /* Inner widget keeps its soft rounded corners */
+    border-radius: 22px; 
+    
     text-align: center;
     color: #f8f4ec;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -64,21 +70,21 @@ html, body {
    TYPOGRAPHY & ORNAMENTS
 ========================== */
 .header-title {
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: #f8f4ec;
     line-height: 1.1;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .ornament-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
     width: 100%;
-    margin: 6px 0 12px 0;
+    margin: 8px 0 16px 0;
 }
 
 .ornament-row .line {
@@ -88,7 +94,7 @@ html, body {
 }
 
 .ornament-row .leaf {
-    font-size: 12px;
+    font-size: 16px;
     opacity: 0.85;
 }
 
@@ -97,18 +103,18 @@ html, body {
 ========================== */
 .progress-track {
     width: 100%;
-    height: 8px;
+    height: 11px;
     background: rgba(248, 244, 236, 0.15);
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .progress-fill {
     width: 0%;
     height: 100%;
     background: #f8f4ec;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: width 0.4s ease;
 }
 
@@ -116,7 +122,7 @@ html, body {
    STATS SECTION
 ========================== */
 .percentage-number {
-    font-size: 46px;
+    font-size: 68px;
     font-weight: 700;
     line-height: 1;
     color: #f8f4ec;
@@ -124,35 +130,35 @@ html, body {
 }
 
 .percentage-label {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.75;
-    margin-top: 6px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 14px;
 }
 
 .days-stat {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
     color: #f8f4ec;
     opacity: 0.9;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .days-stat .slash {
     opacity: 0.4;
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 .days-stat .days-text {
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 15px;
+    letter-spacing: 3px;
     opacity: 0.7;
-    margin-left: 2px;
+    margin-left: 3px;
 }
 
 /* ==========================
@@ -160,16 +166,16 @@ html, body {
 ========================== */
 @media (max-width: 480px) {
     .card-frame {
-        padding: 16px 30px;
+        padding: 20px 35px;
     }
     .widget-box {
-        max-width: 300px;
-        padding: 16px 16px;
+        max-width: 320px;
+        padding: 18px 18px;
     }
     .header-title {
-        font-size: 24px;
+        font-size: 26px;
     }
     .percentage-number {
-        font-size: 38px;
+        font-size: 42px;
     }
 }
