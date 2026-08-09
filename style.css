@@ -34,10 +34,11 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     
-    /* Forces a locked wide horizontal proportion so mobile can't distort it */
-    width: 680px;
-    height: 480px;
-    padding: 30px 85px; 
+    /* Fluid sizing that scales proportionally across desktop and mobile */
+    width: 90vw;
+    max-width: 680px;
+    aspect-ratio: 680 / 480;
+    padding: 6% 12%; 
     
     /* Sharp 90-degree right angles for the outer border */
     border-radius: 0px; 
@@ -54,8 +55,10 @@ html, body {
 .widget-box {
     background-color: #10281b; /* Exact calendar forest green color */
     width: 100%;
-    max-width: 510px; 
-    padding: 26px 32px; 
+    height: 100%;
+    
+    /* Rich interior spacing */
+    padding: 5% 6%; 
     
     /* Inner widget keeps its soft rounded corners */
     border-radius: 22px; 
@@ -65,6 +68,7 @@ html, body {
     border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -72,7 +76,7 @@ html, body {
    TYPOGRAPHY & ORNAMENTS
 ========================== */
 .header-title {
-    font-size: 38px;
+    font-size: clamp(22px, 4vw, 38px);
     font-weight: 600;
     letter-spacing: 4px;
     color: #f8f4ec;
@@ -86,7 +90,7 @@ html, body {
     justify-content: center;
     gap: 14px;
     width: 100%;
-    margin: 6px 0 14px 0;
+    margin: 4% 0;
 }
 
 .ornament-row .line {
@@ -96,7 +100,7 @@ html, body {
 }
 
 .ornament-row .leaf {
-    font-size: 15px;
+    font-size: clamp(12px, 2vw, 15px);
     opacity: 0.85;
 }
 
@@ -109,7 +113,7 @@ html, body {
     background: rgba(248, 244, 236, 0.15);
     border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 14px;
+    margin-bottom: 4%;
 }
 
 .progress-fill {
@@ -124,7 +128,7 @@ html, body {
    STATS SECTION
 ========================== */
 .percentage-number {
-    font-size: 62px;
+    font-size: clamp(36px, 7vw, 62px);
     font-weight: 700;
     line-height: 1;
     color: #f8f4ec;
@@ -132,23 +136,22 @@ html, body {
 }
 
 .percentage-label {
-    font-size: 13px;
+    font-size: clamp(10px, 1.5vw, 13px);
     font-weight: 600;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.75;
-    margin-top: 6px;
-    margin-bottom: 12px;
+    margin-top: 4px;
+    margin-bottom: 4%;
 }
 
 .days-stat {
-    font-size: 20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     font-weight: 600;
     letter-spacing: 1px;
     color: #f8f4ec;
     opacity: 0.9;
-    margin-bottom: 2px;
 }
 
 .days-stat .slash {
@@ -157,7 +160,7 @@ html, body {
 }
 
 .days-stat .days-text {
-    font-size: 14px;
+    font-size: clamp(11px, 2vw, 14px);
     letter-spacing: 3px;
     opacity: 0.7;
     margin-left: 3px;
